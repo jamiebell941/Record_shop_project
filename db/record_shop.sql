@@ -16,5 +16,5 @@ CREATE TABLE records(
   artwork VARCHAR(255),
   quantity INT,
   buy_price INT,
-  sell_price INT,
+  sell_price INT
 );

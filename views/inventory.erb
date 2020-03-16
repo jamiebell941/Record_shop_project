@@ -1,0 +1,15 @@
+<h1>Current Inventory</h1>
+<nav>
+  <ul>
+    <li><a href="inventory/new">Add Item</a></li>
+  </ul>
+</nav>
+<% @records.each do |record| %>
+  <p>Title: <%= record.title() %></p>
+  <p>Genre: <%= record.genre %> </p>
+  <p>Released: <%= record.released %></p>
+  <p>Quantity: <%= record.quantity %></p>
+  <p>Buy Price: <%= record.buy_price %></p>
+  <p>Sell Price: <%= record.sell_price %></p>
+  <hr />
+  <% end %>

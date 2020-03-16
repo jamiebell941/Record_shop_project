@@ -1,3 +1,5 @@
+require_relative('../db/sql_runner')
+
 class Record
 
 attr_reader :id, :artist_id, :released, :artwork, :buy_price
@@ -16,10 +18,10 @@ attr_accessor :title, :genre, :quantity, :sell_price
   end
 
   def save()
-    sql = "INSERT INTO records (artist_id, title, genre, released, artwork, quantity, buy_price, sell_price) = ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING id"
+    sql = "INSERT INTO records (artist_id, title, genre, released, artwork, quantity, buy_price, sell_price) VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING *"
     values =[@artist_id, @title, @genre, @released, @artwork, @quantity, @buy_price, @sell_price]
     record = SqlRunner.run(sql, values)
-    @id = record['id'].to_i
+    @id = record.first['id'].to_i
   end
 
   def delete()
@@ -34,9 +36,15 @@ attr_accessor :title, :genre, :quantity, :sell_price
     SqlRunner.run(sql, values)
   end
 
+  def update_qty()
+    sql = "UPDATE records SET quantity = $1 WHERE id = $2"
+    values = [@quantity, @id]
+    SqlRunner.run(sql, values)
+  end
+
   def self.all()
     sql = "SELECT * FROM records"
-    records = SqlRunner(sql)
+    records = SqlRunner.run(sql)
     result = records.map {|record| Record.new(record)}
     return result
   end
@@ -47,19 +55,28 @@ attr_accessor :title, :genre, :quantity, :sell_price
   end
 
   def self.find_id( id )
-  sql = "SELECT * FROM records WHERE id = $1"
-  values = [id]
-  record = SqlRunner.run( sql, values )
-  result = Record.new( record.first )
-  return result
+    sql = "SELECT * FROM records WHERE id = $1"
+    values = [id]
+    record = SqlRunner.run( sql, values )
+    result = Record.new( record.first )
+    return result
+  end
 
   def self.find_genre( genre )
-  sql = "SELECT * FROM records WHERE genre = $1"
-  values = [genre]
-  record = SqlRunner.run( sql, values )
-  result = Record.new( record )
-  return result
+    sql = "SELECT * FROM records WHERE genre = $1"
+    values = [genre]
+    records = SqlRunner.run( sql, values )
+    result = records.map {|record| Record.new(record)}
+    return result
+  end
 
+  def self.find_artist(artist_id)
+    sql = "SELECT * FROM records WHERE artist_id = $1"
+    values = [artist_id]
+    records = SqlRunner.run( sql, values )
+    result = records.map {|record| Record.new(record)}
+    return result
 
+  end
 
 end
