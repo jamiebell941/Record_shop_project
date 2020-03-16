@@ -42,6 +42,14 @@ attr_accessor :title, :genre, :quantity, :sell_price
     SqlRunner.run(sql, values)
   end
 
+  def artist_name
+    sql ="SELECT name FROM artists INNER JOIN records ON artist_id = artists.id where records.id = $1"
+    values =[@id]
+    artist_name = SqlRunner.run(sql, values)
+    result = artist_name.map {|name| name['name']}.first
+    return result
+  end
+
   def self.all()
     sql = "SELECT * FROM records"
     records = SqlRunner.run(sql)
@@ -76,7 +84,6 @@ attr_accessor :title, :genre, :quantity, :sell_price
     records = SqlRunner.run( sql, values )
     result = records.map {|record| Record.new(record)}
     return result
-
   end
 
 end

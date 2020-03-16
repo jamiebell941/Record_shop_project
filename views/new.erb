@@ -1,4 +1,23 @@
-<form  action="/inventory" method="post">
+<form  action="/records" method="post">
   <label for="title-field">Title:</label>
-<input type="text" name="title" value="title-field">
+<input type="text" name="title" value="Insert Title" id="title-field"><br>
+
+<label for="genre-field">Genre</label>
+<input type="text" name="genre" value="Insert Genre" id="genre-field"><br>
+
+<label for="released-field">Released</label>
+<input type="text" name="released" value="Insert Released Year" id="released-field"><br>
+
+<label for="artwork-field">Album Cover</label>
+<input type="url" name="artwork" value="Insert Artwork URL" id="artwork-field"><br>
+
+<label for="quantity-field">Quantity</label>
+<input type="number" name="quantity" value="quantity-field" id="quantity-field"><br>
+
+<label for="buy-price">Buy Price</label>
+<input type="number" name="buy_price" value="buy-price" id="buy-price"><br>
+
+<label for="sell-price">Sell Price</label>
+<input type="number" name="sell_price" value="sell-price" id="sell-price"><br>
+<input type="submit" value="Add Record">
 </form>
