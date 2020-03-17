@@ -1,8 +1,8 @@
 require( 'sinatra' )
 require( 'sinatra/contrib/all' )
 require( 'pry-byebug' )
-require_relative('models/record')
-require_relative('models/artist')
+require_relative('../models/record')
+require_relative('../models/artist')
 also_reload('./models/*')
 
 get '/' do
@@ -25,12 +25,17 @@ post '/artists' do
 end
 
 get '/artists/:id/edit' do
-  @record = Record.find( params[:id] )
+  @artist = Artist.find( params[:id] )
   erb( :"artists/edit" )
 end
 
+post '/artists/:id' do # update
+  Artist.new( params ).update
+  redirect to '/artists'
+end
+
 post '/artists/:id/delete' do
-  artist = Record.find_id( params[:id] )
-  artists.delete()
+  artist = Artist.find( params[:id] )
+  artist.delete()
   redirect to '/artists'
 end

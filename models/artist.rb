@@ -55,6 +55,6 @@ attr_accessor :name, :status
     values = [@id]
     albums = SqlRunner.run(sql, values)
     result = albums.map {|album| album['title']}
-    return result
+    return result.to_s
   end
 end
