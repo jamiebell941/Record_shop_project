@@ -11,7 +11,10 @@
   <p>Status: <%= artist.status %></p>
   <p>Albums: <%= artist.records %></p>
   <p><a href="/artists/<%= artist.id %>/edit">Edit Artist</a></p>
-  <p><a href="/artists/<%= artist.id %>/delete">Delete Artist</a></p>
+<form class="" action="/artists/<%= artist.id %>/delete" method="post">
+  <input type="submit" name="" value="delete artist">
+
+</form>
 
 </details>
 <hr />

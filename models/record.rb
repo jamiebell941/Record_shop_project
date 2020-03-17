@@ -78,11 +78,11 @@ attr_accessor :title, :genre, :quantity, :sell_price
     SqlRunner.run(sql)
   end
 
-  def self.find_id( id )
+  def self.find( id )
     sql = "SELECT * FROM records WHERE id = $1"
     values = [id]
     record = SqlRunner.run( sql, values )
-    result = Record.new( record.first )
+    result = Record.new( record.first)
     return result
   end
 

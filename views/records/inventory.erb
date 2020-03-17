@@ -18,7 +18,10 @@
   <p>Buy Price: <%= record.buy_price %></p>
   <p>Sell Price: <%= record.sell_price %></p>
   <p><a href="/records/<%= record.id %>/edit">Edit Record</a></p>
-  <p><a href="/records/<%= record.id %>/delete">Delete Record</a></p>
+  <form class="" action="/records/<%= record.id %>/delete" method="post">
+    <input type="submit" name="" value="delete record">
+    </form>
+
   </details>
   <hr />
   <% end %>
