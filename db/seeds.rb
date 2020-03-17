@@ -25,7 +25,7 @@ get_this_in_ya = Record.new('artist_id' => the_chats.id, 'title' => 'Get This In
 get_this_in_ya.save
 dine_n_dish = Record.new('artist_id' => the_chats.id, 'title' => 'Dine N Dash', 'genre' => 'Punk', 'released' => 2020, 'artwork' => 'https://amnplify.com.au/wp-content/uploads/2020/03/The-Chats.jpg', 'quantity' => 29, 'buy_price' => 16, 'sell_price' => 21)
 dine_n_dish.save
-rumours = Record.new('artist_id' => fleetwood_mac.id, 'title' => 'Rumours', 'genre' => 'Rock', 'released' => 1977, 'artwork' => 'https://upload.wikimedia.org/wikipedia/en/f/fb/FMacRumours.PNG', 'quantity' => 17, 'buy_price' => 16, 'sell_price' => 24)
+rumours = Record.new('artist_id' => fleetwood_mac.id, 'title' => 'Rumours', 'genre' => 'Rock', 'released' => 1977, 'artwork' => 'https://upload.wikimedia.org/wikipedia/en/f/fb/FMacRumours.PNG', 'quantity' => 0, 'buy_price' => 16, 'sell_price' => 24)
 rumours.save
 fwmac= Record.new('artist_id' => fleetwood_mac.id, 'title' => 'Fleetwood Mac(1975)', 'genre' => 'Rock', 'released' => 1975, 'artwork' => 'https://upload.wikimedia.org/wikipedia/en/b/b1/Fleetwood_Mac_-_Fleetwood_Mac_%281975%29.png', 'quantity' => 16, 'buy_price' => 16, 'sell_price' => 24)
 fwmac.save

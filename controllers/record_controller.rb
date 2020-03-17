@@ -26,19 +26,18 @@ post '/records' do
 end
 
 get '/records/:id/edit' do
-  @record = Record.find_id( params[:id] )
+  @artists = Artist.all
+  @record = Record.find( params[:id] )
   erb( :"records/edit" )
 end
 
 post '/records/:id/delete' do
   record = Record.find( params[:id] )
-# binding.pry
   record.delete()
-
   redirect to '/records'
 end
 
 get '/stock' do
   @records = Record.all
-  erb(:"record/stock")
+  erb(:stock)
 end

@@ -1,8 +1,0 @@
-<h1>Stock</h1>
-<details><summary>In stock</summary>
-  <% @records.each do |record| %>
-  <% if record.quanity >= 11 %>
-  <p>Title: <%= record.title %></p>
-  <p>Quantity: <%= record.quantity %></p>
-  <% end %>
-</details>
