@@ -3,3 +3,50 @@ body {background-color: #1B1B1E;}
 h1 {color: #FF9D49;}
 summary {color:#FF9D49;}
 .inventory_container {}
+.alert {
+        padding: 20px;
+        background-color: red;
+        color: white;
+        margin-bottom: 15px;
+        }
+.alert.low_stock{background-color: #FF9D49;}
+.alert.over_stocked{background-color: blue;}
+.closebtn {
+          margin-left: 15px;
+          color: white;
+          font-weight: bold;
+          float: right;
+          font-size: 22px;
+          line-height: 20px;
+          cursor: pointer;
+          transition: 0.3s;
+          }
+.closebtn:hover {
+                color: black;
+                }
+ul {
+  list-style-type: none;
+  margin: 10;
+  padding: 500;
+  overflow: hidden;
+  text-align: center;
+  background-color: #6E676D;
+  font-family: monospace; "Courier New", Courier, monospace;
+    }
+
+  li {
+  float: left;
+  font-family: monospace; "Courier New", Courier, monospace;
+  }
+  li a {
+  display: block;
+    color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  }
+
+  li a:hover {
+    background-color: #1B1B1E ;
+    color: #FF9D49;
+                }

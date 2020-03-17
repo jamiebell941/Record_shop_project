@@ -43,10 +43,18 @@ attr_accessor :name, :status
   end
 
   def self.find( id )
-  sql = "SELECT * FROM artists WHERE id = $1"
-  values = [id]
-  artist = SqlRunner.run( sql, values )
-  result = Artist.new( artist.first )
+    sql = "SELECT * FROM artists WHERE id = $1"
+    values = [id]
+    artist = SqlRunner.run( sql, values )
+    result = Artist.new( artist.first )
   return result
-end
+  end
+
+  def records
+    sql = "SELECT title FROM records INNER JOIN artists ON artists.id = artist_id WHERE artists.id = $1"
+    values = [@id]
+    albums = SqlRunner.run(sql, values)
+    result = albums.map {|album| album['title']}
+    return result
+  end
 end

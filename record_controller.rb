@@ -6,27 +6,27 @@ require_relative('models/artist')
 also_reload('./models/*')
 
 get '/' do
-  erb(:index)
+  erb(:"index")
 end
 
 get '/records' do
   @records = Record.all()
-  erb(:inventory)
+  erb(:"records/inventory")
 end
 
 get '/records/new' do
-  erb(:new)
+  erb(:"records/new")
 end
 
 post '/records' do
   @record = Record.new( params )
   @record.save()
-  erb( :create )
+  erb( :"records/create" )
 end
 
 get '/records/:id/edit' do
   @record = Record.find_id( params[:id] )
-  erb( :edit )
+  erb( :"records/edit" )
 end
 
 post '/records/:id/delete' do

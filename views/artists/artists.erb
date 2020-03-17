@@ -1,0 +1,16 @@
+<h1>Artists</h1>
+<nav>
+  <ul>
+    <li><a href="records/new">Add Item</a></li>
+  </ul>
+</nav>
+
+<% @artists.each do |artist| %>
+<details>
+  <summary>Artist: <%= artist.name %></summary>
+  <p>Status: <%= artist.status %></p>
+  <p>Albums: <%= artist.records %></p>
+
+</details>
+<hr />
+<% end %>

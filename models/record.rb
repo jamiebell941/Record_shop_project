@@ -40,12 +40,15 @@ attr_accessor :title, :genre, :quantity, :sell_price
     low_stock = "This record is low on stock"
     out_of_stock = "This record is out of stock"
     over_stocked = "This record is over-stocked, consider price change"
-   if @quantity <= 10
+    in_stock = "This Record is well stocked"
+   if @quantity.to_i <= 10
       return low_stock
-    elsif @quanity == 0
-      return out_of_stock
-    elsif @quantity >= 20
+    elsif @quanity.to_i >= 11
+      return in_stock
+    elsif @quantity.to_i >= 30
       return over_stocked
+    # elsif @quanity.to_i == 0
+    #   return out_of_stock
     end
   end
 
