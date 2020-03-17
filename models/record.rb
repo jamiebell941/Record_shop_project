@@ -36,6 +36,19 @@ attr_accessor :title, :genre, :quantity, :sell_price
     SqlRunner.run(sql, values)
   end
 
+  def quantity_tracker
+    low_stock = "This record is low on stock"
+    out_of_stock = "This record is out of stock"
+    over_stocked = "This record is over-stocked, consider price change"
+   if @quantity <= 10
+      return low_stock
+    elsif @quanity == 0
+      return out_of_stock
+    elsif @quantity >= 20
+      return over_stocked
+    end
+  end
+
   def update_qty()
     sql = "UPDATE records SET quantity = $1 WHERE id = $2"
     values = [@quantity, @id]
