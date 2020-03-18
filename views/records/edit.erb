@@ -1,3 +1,6 @@
+<div class="form-container">
+
+
 <form  action="/records" method="post">
   <label for="artist-id">Artist:</label>
   <select name="artist_id" id="artist-id">
@@ -18,13 +21,15 @@
   <input type="text" name="artwork" value="<%= @record.artwork %> " id="artwork">
 
   <label for="quantity">Quantity:</label>
-  <input type="number" name="quantity" value="<%= @record.quantity %> " id="quantity">
+  <input type="number" name="quantity" value="<%= @record.quantity.to_i %> " id="quantity">
 
   <label for="buy-price">Buy Price:</label>
-  <input type="number" name="buy_price" value="<%= @record.buy_price%> " id="buy-price">
+  <input type="number" name="buy_price" value="<%= @record.buy_price.to_i%> " id="buy-price">
 
   <label for="sell-price">Sell Price:</label>
-  <input type="number" name="sell_price" value="<%= @record.sell_price %> " id="sell-price">
+  <input type="number" name="sell_price" value="<%= @record.sell_price.to_i %> " id="sell-price">
 
-  <input type='submit' value="Edit Record">
+  <input class="form-btn" type='submit' value="Edit Record">
+
 </form>
+</div>

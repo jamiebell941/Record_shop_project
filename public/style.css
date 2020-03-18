@@ -12,9 +12,15 @@ font-family: 'Raleway', sans-serif;
 font-weight:700;
 font-size: 6em;
 text-align: center;}
+label{color: #FF9D49;
+font-family: 'Raleway', sans-serif;
+font-weight:normal;
+font-size: 1.5em;
+}
 
 summary {color:#FF9D49;}
-.inv_cont {text-align: center;
+.inv_cont {position: relative;
+          text-align: center;
           margin-top: 40px;
           border: 2px;
           border-color: #FF9D49;
@@ -45,7 +51,7 @@ ul {
     background-color: #1B1B1E ;
     color: #FF9D49;
                 }
-  .btn {
+.btn {
         border: 1px solid #FF9D49;
         background: none;
         color: #FF9D49;
@@ -67,7 +73,7 @@ ul {
   .btn:hover{background-color: #FF9D49;
             color: #FBFFFE;}
 
-            .btn-add {
+.btn-add {
                   border: 1px solid #FF9D49;
                   background: none;
                   color: #FF9D49;
@@ -87,18 +93,17 @@ ul {
                  position:relative;
                  left: 46%;
                           }
-            .btn-add:hover{background-color: #FF9D49;
+.btn-add:hover{background-color: #FF9D49;
                       color: #FBFFFE;}
 
 .container-btn{position: relative;
               bottom: 15px;
               margin-left: 41%;
-            margin-right: 41%;
-          margin-bottom:5%;
-        margin-top: 2%;}
+              margin-right: 41%;
+              margin-bottom:5%;
+              margin-top: 2%;}
 
-
-        .hero-image {
+.hero-image {
           background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0,0,0,0.4)), url(http://www.nightlightrec.com/wp-content/uploads/2013/07/banner-nl-1.gif);
           height: 280px;
           background-position: center;
@@ -106,7 +111,7 @@ ul {
           background-size: cover;
           position: relative;
         }
-        .hero-text {
+.hero-text {
           text-align: center;
           position: absolute;
           top: 50%;
@@ -114,12 +119,83 @@ ul {
           transform: translate(-50%, -50%);
           color: white;
         }
-        /* #bannerimage {
-          width: 100%;
-          background-image: url(http://www.nightlightrec.com/wp-content/uploads/2013/07/banner-nl-1.gif);
-          height: 280px;
-          background-color: white;
-          background-position: center;
-        } */
 
-.img-cont-left{position: relative;}
+.albm-art-cont{position: absolute;
+              top: 20px;
+              left: 60px;}
+
+input, select {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+              }
+.form-container{padding-left: 12px;
+                padding-right: 12px;
+                background-color: #6E676D;
+                margin: 10px;
+                border-radius: 8px;}
+.form-btn {
+      border: 1px solid #FF9D49;
+      background: none;
+      color: #FF9D49;
+      border-radius: 20px;
+      padding: 8px 8px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 1em;
+      margin: 2px 2px;
+      cursor: pointer;
+      width: 100%;
+      height: 30px;
+      transition: 0.8s;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 200;
+                                }
+.form-btn:hover{background-color: #FF9D49;
+          color: #FBFFFE;}
+
+.low-stock-container{position: relative;
+                  left: 32%;
+                text-align: center;
+                padding-right: 12px;
+                background-color: #6E676D;
+                margin: 10px;
+                border-radius: 8px;
+                width:30%;}
+.out-stock-container{margin-left: 64%;
+                text-align: center;
+                padding-right: 12px;
+                background-color: #6E676D;
+                margin: 10px;
+                border-radius: 8px;
+                width:30%;}
+.in-stock-container{padding-left: 12px;
+                text-align: center;
+                padding-right: 12px;
+                background-color: #6E676D;
+                margin: 10px;
+                border-radius: 8px;
+                width:30%;}
+
+.stock-container{position: relative;
+          text-align: center;
+          margin-top: 40px;
+          border: 2px;
+          border-color: #FF9D49;
+        font-family: 'Raleway', sans-serif; }
+hr {border-color:#FF9D49 }
+
+.create-container{text-align: center;
+                  font-family: 'Raleway', sans-serif;
+                  margin-top: 20px; }
+.new-container{text-align: center;
+              margin: 20px;
+              background-color: #6E676D;
+            border: solid 2px;
+          border-color: #FF9D49;
+        }

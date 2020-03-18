@@ -1,4 +1,9 @@
 <h1>Stock</h1>
+
+
+<div class="stock-container">
+
+
 <details><summary>In stock</summary>
   <% @records.each do |record| %>
   <% if record.quantity.to_i >= 11 %>
@@ -7,8 +12,7 @@
     <hr>
   <% end %>
   <% end %>
-
-</details>
+  </details>
 <details><summary>Low Stock</summary>
   <% @records.each do |record| %>
   <% if record.quantity.to_i <= 10 && record.quantity.to_i > 0%>
@@ -17,15 +21,16 @@
     <hr>
   <% end %>
   <% end %>
-
 </details>
-<details><summary>Out of Stock</summary>
+
+
   <% @records.each do |record| %>
   <% if record.quantity.to_i == 0 %>
+    <details><summary>Out of Stock</summary>
   <p>Title: <%= record.title %></p>
   <p>Quantity: <%= record.quantity %></p>
     <hr>
   <% end %>
   <% end %>
-
 </details>
+</div>

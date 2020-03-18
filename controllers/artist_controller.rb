@@ -6,6 +6,7 @@ require_relative('../models/artist')
 also_reload('./models/*')
 
 get '/' do
+    @records = Record.all()
   erb(:"index")
 end
 

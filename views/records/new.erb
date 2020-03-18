@@ -1,12 +1,18 @@
 <h1>New Artist</h1>
+<div class="form-container">
+
+
 <form  action="/artists" method="post">
   <label for="name-field">Name:</label>
-  <input type="text" name="name" value="Artist Name" id="name-field">
+  <input type="text" name="name" placeholder="Artist Name" id="name-field">
   <label for="status-field">Status:</label>
-  <input type="text" name="status" value="Recording Status" id="status-field">
-  <input type="submit" value="Add Artist">
+  <input type="text" name="status" placeholder="Recording Status" id="status-field">
+  <input class="form-btn" type="submit" value="Add Artist">
 </form>
+</div>
 <h1>New Record</h1>
+
+<div class="form-container">
 
 
 <form  action="/records" method="post">
@@ -16,26 +22,27 @@
     <option value="<%= artist.id %>"><%= artist.name %></option>
   <% end %>
   </select>
-  
+
   <label for="title-field">Title:</label>
-<input type="text" name="title" value="Insert Title" id="title-field"><br>
+<input type="text" name="title" placeholder="Insert Title" id="title-field"><br>
 
 <label for="genre-field">Genre</label>
-<input type="text" name="genre" value="Insert Genre" id="genre-field"><br>
+<input type="text" name="genre" placeholder="Insert Genre" id="genre-field"><br>
 
 <label for="released-field">Released</label>
-<input type="text" name="released" value="Insert Released Year" id="released-field"><br>
+<input type="text" name="released" placeholder="Insert Released Year" id="released-field"><br>
 
 <label for="artwork-field">Album Cover</label>
-<input type="url" name="artwork" value="Insert Artwork URL" id="artwork-field"><br>
+  <input type="url" name="artwork" placeholder="Insert Artwork URL" id="artwork-field"><br>
 
 <label for="quantity-field">Quantity</label>
-<input type="number" name="quantity" value="quantity-field" id="quantity-field"><br>
+  <input type="number" name="quantity" value="quantity-field" id="quantity-field"><br>
 
 <label for="buy-price">Buy Price</label>
-<input type="number" name="buy_price" value="buy-price" id="buy-price"><br>
+  <input type="number" name="buy_price" value="buy-price" id="buy-price"><br>
 
 <label for="sell-price">Sell Price</label>
-<input type="number" name="sell_price" value="sell-price" id="sell-price"><br>
-<input type="submit" value="Add Record">
-</form>
+  <input type="number" name="sell_price" value="sell-price" id="sell-price"><br>
+    <input class="form-btn" type="submit" value="Add Record">
+  </form>
+</div>

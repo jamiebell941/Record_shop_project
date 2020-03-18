@@ -1,13 +1,11 @@
 <h1>Current Inventory</h1>
-<nav>
-  <ul>
-    <li><a href="records/new">Add Item</a></li>
-  </ul>
-</nav>
-
+<form action="/records/new" method="get">
+   <input class="btn-add" type="submit" name="" value="Add Record">
+</form>
 
 
 <% @records.each do |record| %>
+<div class="inv_cont">
 <details>
   <summary>Title: <%= record.title() %></summary>
   <p>Artist: <%= record.artist_name %></p>
@@ -17,11 +15,20 @@
   <p><%=record.quantity_tracker%></p>
   <p>Buy Price: <%= record.buy_price %></p>
   <p>Sell Price: <%= record.sell_price %></p>
-  <p><a href="/records/<%= record.id %>/edit">Edit Record</a></p>
-  <form class="" action="/records/<%= record.id %>/delete" method="post">
-    <input type="submit" name="" value="delete record">
-    </form>
+  <div class="container-btn">
+    <form action="/records/<%= record.id %>/edit" method="get">
+      <input class="btn" type="submit" name="" value="Edit Record">
+  </form>
+  <form  action="/records/<%= record.id %>/delete" method="post">
+    <input class="btn" type="submit" name="" value="Delete Record">
+  </form>
 
+</div>
+
+<div class="albm-art-cont">
+  <img src="<%= record.artwork %>" alt="" width=260px, height=260px>
+</div>
   </details>
-  <hr />
+</div>
+
   <% end %>

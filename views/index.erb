@@ -1,1 +1,9 @@
-<h1>this is the homepage</h1>
+<div class="new-container">
+<% @records.each do |record| %>
+<h1>New Releases</h1>
+<p>The newest and latest records added to the inventory</p>
+<% if record.released.to_i == 2020 %>
+<img src="<%= record.artwork %>" alt="">
+<% end %>
+<% end %>
+</div>
