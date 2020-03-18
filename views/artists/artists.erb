@@ -1,21 +1,22 @@
-<h1>Artists</h1>
-<nav>
-  <ul>
-    <li><a href="records/new">Add Item</a></li>
-  </ul>
-</nav>
+
+ <form action="/records/new" method="get">
+    <input class="btn-add" type="submit" name="" value="Add Artist">
 
 <% @artists.each do |artist| %>
+<div class="inv_cont">
 <details>
   <summary>Artist: <%= artist.name %></summary>
   <p>Status: <%= artist.status %></p>
   <p>Albums: <%= artist.records %></p>
-  <p><a href="/artists/<%= artist.id %>/edit">Edit Artist</a></p>
-<form class="" action="/artists/<%= artist.id %>/delete" method="post">
-  <input type="submit" name="" value="delete artist">
-
+  <div class="container-btn">
+  <form action="/artists/<%= artist.id %>/edit" method="get">
+    <input class="btn" type="submit" name="" value="Edit Artist">
 </form>
-
+<form class="" action="/artists/<%= artist.id %>/delete" method="post">
+  <input class="btn" type="submit" name="" value="Delete Artist">
+  </form>
+  </div>
 </details>
-<hr />
+
+</div>
 <% end %>

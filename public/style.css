@@ -1,29 +1,24 @@
 p {color: #FBFFFE;}
-body {background-color: #1B1B1E;}
-h1 {color: #FF9D49;}
+body {margin:0;
+    padding: 0;
+  background-color: #1B1B1E;}
+h1 {color: #FF9D49;
+font-family: 'Raleway', sans-serif;
+font-weight:600;
+font-size: 2.5em;
+text-align: center;}
+h2 {color: #FF9D49;
+font-family: 'Raleway', sans-serif;
+font-weight:700;
+font-size: 6em;
+text-align: center;}
+
 summary {color:#FF9D49;}
-.inventory_container {}
-.alert {
-        padding: 20px;
-        background-color: red;
-        color: white;
-        margin-bottom: 15px;
-        }
-.alert.low_stock{background-color: #FF9D49;}
-.alert.over_stocked{background-color: blue;}
-.closebtn {
-          margin-left: 15px;
-          color: white;
-          font-weight: bold;
-          float: right;
-          font-size: 22px;
-          line-height: 20px;
-          cursor: pointer;
-          transition: 0.3s;
-          }
-.closebtn:hover {
-                color: black;
-                }
+.inv_cont {text-align: center;
+          margin-top: 40px;
+          border: 2px;
+          border-color: #FF9D49;
+        font-family: 'Raleway', sans-serif; }
 ul {
   list-style-type: none;
   margin: 10;
@@ -50,16 +45,81 @@ ul {
     background-color: #1B1B1E ;
     color: #FF9D49;
                 }
-  .button {
-                  background-color: #FF9D49;
-                  border-radius: 12px
-                  border: none;
-                  color: #1B1B1E;
-                  padding: 15px 32px;
+  .btn {
+        border: 1px solid #FF9D49;
+        background: none;
+        color: #FF9D49;
+        border-radius: 20px;
+        padding: 8px 8px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1em;
+        margin: 2px 2px;
+        cursor: pointer;
+        width: 120px;
+        height: 30px;
+       transition: 0.8s;
+       float: left;
+       font-family: 'Raleway', sans-serif;
+       font-weight: 200;
+                }
+  .btn:hover{background-color: #FF9D49;
+            color: #FBFFFE;}
+
+            .btn-add {
+                  border: 1px solid #FF9D49;
+                  background: none;
+                  color: #FF9D49;
+                  border-radius: 20px;
+                  padding: 8px 8px;
                   text-align: center;
                   text-decoration: none;
                   display: inline-block;
-                  font-size: 16px;
-                  margin: 4px 2px;
+                  font-size: 1em;
+                  margin: 2px 2px;
                   cursor: pointer;
-                }
+                  width: 120px;
+                  height: 30px;
+                 transition: 0.8s;
+                 font-family: 'Raleway', sans-serif;
+                 font-weight: 200;
+                 position:relative;
+                 left: 46%;
+                          }
+            .btn-add:hover{background-color: #FF9D49;
+                      color: #FBFFFE;}
+
+.container-btn{position: relative;
+              bottom: 15px;
+              margin-left: 41%;
+            margin-right: 41%;
+          margin-bottom:5%;
+        margin-top: 2%;}
+
+
+        .hero-image {
+          background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0,0,0,0.4)), url(http://www.nightlightrec.com/wp-content/uploads/2013/07/banner-nl-1.gif);
+          height: 280px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          position: relative;
+        }
+        .hero-text {
+          text-align: center;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: white;
+        }
+        /* #bannerimage {
+          width: 100%;
+          background-image: url(http://www.nightlightrec.com/wp-content/uploads/2013/07/banner-nl-1.gif);
+          height: 280px;
+          background-color: white;
+          background-position: center;
+        } */
+
+.img-cont-left{position: relative;}
