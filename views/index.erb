@@ -1,9 +1,10 @@
 <div class="new-container">
-<% @records.each do |record| %>
+
 <h1>New Releases</h1>
 <p>The newest and latest records added to the inventory</p>
+<% @records.each do |record| %>
 <% if record.released.to_i == 2020 %>
-<img src="<%= record.artwork %>" alt="">
+<img src="<%= record.artwork %>" alt="" height="220px" width="220px">
 <% end %>
 <% end %>
 </div>
